@@ -17,20 +17,16 @@ Example test:
 ---
 
     writeout "Text describing test"
+    assert_status_code "http://catfacts-api.appspot.com/api/facts?number=0" "200"
     haystack="`curl -s http://catfacts-api.appspot.com/api/facts?number=0`"
     needle='{"facts": [], "success": "true"}'
     assert_contains "$haystack" "$needle"
 
   * `writeout`: write out the test name
+  * `assert_status_code`: assert that the URL returns the expected response code
   * `haystack`: curl command to access endpoint
   * `needle`: text to find in the response
   * `assert_contains`: assert that $needle can be found in $haystack
-
-
-    writeout "Text describing test"
-    assert_status_code "http://catfacts-api.appspot.com/api/facts?number=0" "200"
-
-  * `assert_status_code`: assert that the URL returns the expected response code
 
 Available methods
 ---
