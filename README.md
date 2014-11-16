@@ -11,7 +11,7 @@ You should be able to use these to reassure yourself that your fully functional 
 To run the tests:
 ---
 
-	./run.sh
+    ./run.sh
 
 Example test:
 ---
@@ -21,19 +21,19 @@ Example test:
     needle='{"facts": [], "success": "true"}'
     assert_contains "$haystack" "$needle"
 
-  * `writeout: write out the test name
-  * `haystack: curl command to access endpoint
-  * `needle: text to find in the response
-  * `assert_contains: assert that $needle can be found in $haystack
+  * `writeout`: write out the test name
+  * `haystack`: curl command to access endpoint
+  * `needle`: text to find in the response
+  * `assert_contains`: assert that $needle can be found in $haystack
 
     writeout "Text describing test"
     assert_status_code "http://catfacts-api.appspot.com/api/facts?number=0" "200"
 
-  * assert_status_code: assert that the URL returns the expected response code
+  * `assert_status_code`: assert that the URL returns the expected response code
 
 Available methods
 ---
 
- * assert_contains "$haystack" "$needle"
- * assert_equals "$str1" "$str2"
- * assert_status_code "$url" "$code"
+ * `assert_contains "$haystack" "$needle"`
+ * `assert_equals "$str1" "$str2"`
+ * `assert_status_code "$url" "$code"`
