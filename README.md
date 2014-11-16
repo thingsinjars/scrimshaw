@@ -26,6 +26,7 @@ Example test:
   * `needle`: text to find in the response
   * `assert_contains`: assert that $needle can be found in $haystack
 
+
     writeout "Text describing test"
     assert_status_code "http://catfacts-api.appspot.com/api/facts?number=0" "200"
 
