@@ -1,4 +1,4 @@
-Scrimshaw
+Scrimshaw ☠
 ===
 
 Bare-bones API tests built on cURL
